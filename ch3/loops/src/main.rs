@@ -114,19 +114,20 @@ fn fibonacci(n: u32) -> u32 {
         return 0;
     }
 
-    if n == 1 {
+    if n <= 2 {
         return 1;
     }
 
-    let mut x1: u32 = 1;
-    let mut x2: u32 = 1;
-    let mut x3: u32 = x1 + x2;
+    let mut x1: u32 = 1; // n = 1
+    let mut x2: u32 = 1; // n = 2
 
-    for i in 3..=n {
-        x3 = x2 + x1;
+    let mut result: u32 = x1 + x2; // n = 3
+
+    for i in 4..=n {
         x1 = x2;
-        x2 = x3;
+        x2 = result;
+        result = x2 + x1;
     }
 
-    return x3;
+    return result;
 }
