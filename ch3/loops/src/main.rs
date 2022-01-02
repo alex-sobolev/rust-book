@@ -12,6 +12,10 @@ fn main() {
     // `for`
     for_loop();
     for_loop_with_count();
+
+    let n = 13;
+    let fib = fibonacci(n);
+    println!("The fibonacci of {} is: {}", n, fib);
 }
 
 fn simple_loop() {
@@ -103,4 +107,26 @@ fn for_loop_with_count() {
     }
 
     println!("Lift off!");
+}
+
+fn fibonacci(n: u32) -> u32 {
+    if n == 0 {
+        return 0;
+    }
+
+    if n == 1 {
+        return 1;
+    }
+
+    let mut x1: u32 = 1;
+    let mut x2: u32 = 1;
+    let mut x3: u32 = x1 + x2;
+
+    for i in 3..=n {
+        x3 = x2 + x1;
+        x1 = x2;
+        x2 = x3;
+    }
+
+    return x3;
 }
