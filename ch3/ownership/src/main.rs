@@ -1,5 +1,3 @@
-use proc_macro::bridge::PanicMessage::String;
-
 fn main() {
     // `stack` vs `heap`
 
@@ -51,6 +49,15 @@ fn main() {
     let num1 = 1;
     make_copy(num1); // Since `i32` type implements `Copy`, it's cloned to the `make_copy` function
                      // And `num1` can still be used after calling the `make_copy` function
+
+    // returning a value from a function can also pass ownership of the data it returns:
+    let another_fn_string = give_ownership();
+    println!("{}", another_fn_string); // "A string from another function"
+
+    // Also, a function can take ownership and return it back:
+    let my_str = String::from("A new string here");
+    let str_returned_back = take_and_give_ownership(my_str); // `my_str` was move into the function and no longer can be used
+    println!("{}", str_returned_back); // "A new string here"
 }
 
 fn take_ownership(str: String) {
@@ -62,4 +69,14 @@ fn take_ownership(str: String) {
 fn make_copy(n: i32) {
     // Since `i32` type implements `Copy`, it's cloned to the `make_copy` function
     println!("{}", n);
+}
+
+fn give_ownership() -> String {
+    let some_string = String::from("A string from another function");
+
+    some_string // returns data of `String` type here
+}
+
+fn take_and_give_ownership(str: String) -> String {
+    str
 }
