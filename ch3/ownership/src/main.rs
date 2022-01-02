@@ -24,6 +24,21 @@ fn main() {
     let mut s = String::from("Hello");
 
     s.push_str(", world!");
-
     println!("{}", s);
+
+    // In Rust, each data has one owner, i.e. it belongs to only one variable
+
+    // Stack-only data implements Copy trait
+    // It means if you try to assign one variable value to another, it will be cloned:
+    let val1 = 12;
+    let val2 = val1; // 12 is cloned here, because it's on the stack, it's fast to do.
+
+    // Heap-based data doesn't implement `Copy`, so if you want to clone it, you have to do it explicitly:
+    let val1 = String::from("Hello, Jack!");
+    let val2 = val1.clone();
+
+    // In any other case, a `move` of heap data will happen:
+    let val1 = String::from("Hello, Jack!");
+    let val2 = val1; // a reference to a given heap data (pointer, len, capacity) was moved from `val1` to `val2`
+                     // `val1` is no longer valid from here on, and cannot be accessed after the `move` operation
 }
