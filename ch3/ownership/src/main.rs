@@ -1,3 +1,5 @@
+use proc_macro::bridge::PanicMessage::String;
+
 fn main() {
     // `stack` vs `heap`
 
@@ -41,4 +43,23 @@ fn main() {
     let val1 = String::from("Hello, Jack!");
     let val2 = val1; // a reference to a given heap data (pointer, len, capacity) was moved from `val1` to `val2`
                      // `val1` is no longer valid from here on, and cannot be accessed after the `move` operation
+
+    // The same logic of `move` / `copy` applies when you pass arguments to a function
+    let string1 = String::from("My awesome string");
+    take_ownership(string1); // `string1` is moved into the function `take_ownership` and can no longer be used
+
+    let num1 = 1;
+    make_copy(num1); // Since `i32` type implements `Copy`, it's cloned to the `make_copy` function
+                     // And `num1` can still be used after calling the `make_copy` function
+}
+
+fn take_ownership(str: String) {
+    // take_ownership takes ownership of the argument of type `String` passed to it
+    println!("{}", str);
+    // And then `str` is dropped here (at the end of the current scope)
+}
+
+fn make_copy(n: i32) {
+    // Since `i32` type implements `Copy`, it's cloned to the `make_copy` function
+    println!("{}", n);
 }
