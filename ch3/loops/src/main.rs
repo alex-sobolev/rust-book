@@ -1,6 +1,5 @@
 fn main() {
-    // 3 types of loops:
-    // `loop`, `while`, `for`
+    // 3 types of loops: `loop`, `while`, `for`
 
     // `loop`
     simple_loop();
