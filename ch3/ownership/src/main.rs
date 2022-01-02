@@ -2,11 +2,11 @@ fn main() {
     // `stack` vs `heap`
 
     // Stack:
-    // you store data which size is known and fixed at compile time (scalar types):
+    // you store data which size is known and fixed at compile time:
     // `&str`, int, float, array etc
 
     // Heap:
-    // you store data which size is not known or may change after compilation (compound types):
+    // you store data which size is not known or may change after compilation:
     // String, vector etc
 
     // Stack: first in, last out
@@ -20,4 +20,10 @@ fn main() {
     // A pointer has a fixed size, so it can be stored on the stack
     // To access the data, you must follow the pointer
     // This is why accessing data in the heap is slower than accessing data on the stack
+
+    let mut s = String::from("Hello");
+
+    s.push_str(", world!");
+
+    println!("{}", s);
 }
