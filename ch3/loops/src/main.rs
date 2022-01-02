@@ -128,5 +128,5 @@ fn fibonacci(n: u32) -> u32 {
         result = x2 + x1;
     }
 
-    return result;
+    result
 }
