@@ -1,0 +1,23 @@
+### rust-book
+#### Let's go through the [Rust book](https://doc.rust-lang.org/book/).
+
+- [] [Chapter 1](https://doc.rust-lang.org/book/ch01-00-getting-started.html)
+- [] [Chapter 2](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)
+- [] [Chapter 3](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html)
+- [] [Chapter 4](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
+- [] [Chapter 5](https://doc.rust-lang.org/book/ch05-00-structs.html)
+- [] [Chapter 6](https://doc.rust-lang.org/book/ch06-00-enums.html)
+- [] [Chapter 7](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
+- [] [Chapter 8](https://doc.rust-lang.org/book/ch08-00-common-collections.html)
+- [] [Chapter 9](https://doc.rust-lang.org/book/ch09-00-error-handling.html)
+- [] [Chapter 10](https://doc.rust-lang.org/book/ch10-00-generics.html)
+- [] [Chapter 11](https://doc.rust-lang.org/book/ch11-00-testing.html)
+- [] [Chapter 12](https://doc.rust-lang.org/book/ch12-00-an-io-project.html)
+- [] [Chapter 13](https://doc.rust-lang.org/book/ch13-00-functional-features.html)
+- [] [Chapter 14](https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html)
+- [] [Chapter 15](https://doc.rust-lang.org/book/ch15-00-smart-pointers.html)
+- [] [Chapter 16](https://doc.rust-lang.org/book/ch16-00-concurrency.html)
+- [] [Chapter 17](https://doc.rust-lang.org/book/ch17-00-oop.html)
+- [] [Chapter 18](https://doc.rust-lang.org/book/ch18-00-patterns.html)
+- [] [Chapter 19](https://doc.rust-lang.org/book/ch19-00-advanced-features.html)
+- [] [Chapter 20](https://doc.rust-lang.org/book/ch20-00-final-project-a-web-server.html)
