@@ -1,8 +1,8 @@
 ### rust-book
-#### Let's go through the [Rust book](https://doc.rust-lang.org/book/).
+#### Let's go through [the Rust book](https://doc.rust-lang.org/book/).
 
 - [x] [Chapter 1](https://doc.rust-lang.org/book/ch01-00-getting-started.html)
-- [ ] [Chapter 2](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)
+- [x] [Chapter 2](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)
 - [ ] [Chapter 3](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html)
 - [ ] [Chapter 4](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
 - [ ] [Chapter 5](https://doc.rust-lang.org/book/ch05-00-structs.html)
